@@ -90,7 +90,7 @@ body {
      font-weight: bold;
     }
     .contact-info a:hover {
-     text-decoration: undeline;
+     text-decoration: underline;
     }
    /* MEDIA QUERIES for Responsiveness */
    @media screen and (max-width: 768px) {
