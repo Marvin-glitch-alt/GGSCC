@@ -208,7 +208,7 @@ body {
 
 /* Footer */
 footer {
-    background-color: #f4f1e1; /* Cream-like background */
+    background-color: #fafaf9; /* Cream-like background */
     color: #333;
     padding: 20px;
     text-align: center;
@@ -233,4 +233,5 @@ footer {
     text-decoration: none;
     font-weight: bold;
 }
+
 
