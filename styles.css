@@ -112,7 +112,7 @@ body {
     .left img {
     width: 120px;
     }
-    .service-card .about-card {
+    .service-card .about-card .box {
         width: 100%;
         max-width: 300px;
         margin-bottom: 20px;
