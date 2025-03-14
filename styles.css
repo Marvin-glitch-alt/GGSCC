@@ -137,7 +137,6 @@ body {
 
    /* Service Cards Section */
 .services {
-    background-color: #F5F5DC;
     display: flex;
     gap: 20px;
     justify-content: center;
@@ -151,7 +150,7 @@ body {
 }
 
 .service-card {
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
@@ -217,8 +216,7 @@ body {
 }
 
 /* Footer */
-footer {
-    background-color: #fafaf9; 
+footer { 
     color: #333;
     padding: 10px;
     text-align: center;
@@ -265,7 +263,7 @@ footer {
 }
 
 .about-card {
-    background-color: whitesmoke;
+    background-color: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 300px;
@@ -338,7 +336,6 @@ footer {
    }
 
    .mission-vision {
-    background-color: #F5F5DC;
     margin-top: 20px;
     margin-bottom: 20px;
     padding: 20px;
@@ -375,11 +372,11 @@ footer {
 
 /* Individual Box Colors */
 .mission {
-    background-color: whitesmoke; 
+    background-color: white; 
 }
 
 .vision {
-    background-color: whitesmoke;
+    background-color: white;
 }
 .mission h2, .vision h2 {
     color: rgb(239, 207, 27);
@@ -394,4 +391,53 @@ footer {
 .logo-text-about  {
     color: #28a745;
     
+}
+
+/* Slide in from bottom animation */
+@keyframes slideInBottom {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Slide in from right animation */
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+.slide-in-right {
+    opacity: 0; /* Initially hidden */
+    transform: translateX(100px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+.slide-in-right.animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Apply animation to specific elements */
+.about-card, .service-card, .box {
+    opacity: 0; /* Initially hidden */
+    animation: slideInBottom 0.8s ease-out forwards;
+}
+
+.img-fluid, .contact-section svg:not(.footer-content svg) {
+    opacity: 0; /* Initially hidden */
+    animation: slideInRight 0.8s ease-out forwards;
+}
+
+/* Trigger animations on scroll */
+.reveal {
+    opacity: 1 !important;
 }
