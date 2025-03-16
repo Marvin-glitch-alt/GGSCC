@@ -96,6 +96,8 @@ body {
    /* MEDIA QUERIES for Responsiveness */
    @media screen and (max-width: 768px) {
     .team-section, .contact-section {
+        display: flex;
+    justify-content: center;
     flex-direction: column;
     text-align: center;
     padding: 30px;
