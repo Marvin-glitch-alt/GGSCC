@@ -1,21 +1,3 @@
-
-document.addEventListener("DOMContentLoaded", function () {
-    function revealOnScroll() {
-        let elements = document.querySelectorAll('.about-card, .service-card, .box, .img-fluid, .contact-section svg:not(.footer-content svg)');
-        let windowHeight = window.innerHeight;
-
-        elements.forEach(element => {
-            let position = element.getBoundingClientRect().top;
-            if (position < windowHeight - 50) {
-                element.classList.add("reveal");
-            }
-        });
-    }
-
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // Trigger on page load
-});
-
 document.addEventListener("DOMContentLoaded", function () {
     const slideRightElements = document.querySelectorAll(".slide-in-right");
 

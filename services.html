@@ -130,5 +130,35 @@
 
     <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll(".service-card");
+
+    boxes.forEach((box) => {
+        const image = box.querySelector(".service-card img");
+        const heading = box.querySelector(".service-card h2");
+        const paragraph = box.querySelector(".service-card p");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Add animation with staggered delays
+                    setTimeout(() => box.classList.add("animate"), 200);  
+                    setTimeout(() => image.classList.add("animate"), 600);
+                    setTimeout(() => heading.classList.add("animate"), 1000);
+                    setTimeout(() => paragraph.classList.add("animate"), 1400);
+
+                    observer.unobserve(entry.target); // Stop observing after animation triggers
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe(box);
+    });
+});
+
+  </script>
+
 </body>
 </html>

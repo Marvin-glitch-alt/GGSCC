@@ -100,7 +100,7 @@
               <p>We uphold the highest standards of discretion and protect all sensitive client information.</p>
             </div>
             <div class="about-card">
-              <img src="assets/creative-mind-innovation-svgrepo-com.svg" alt="">
+              <img src="assets/creative-mind-innovation-svgrepo-com.svg" alt="Creativity">
               <h2>Creativity</h2>
               <p>We foster innovative thinking to craft solutions that meet and exceed client expectations.</p>
             </div>            
@@ -191,5 +191,36 @@
 
     <script src="script.js"></script>  
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll(".about-card, .box");
+
+    boxes.forEach((box) => {
+        const image = box.querySelector(".about-card img,.box img");
+        const heading = box.querySelector(".about-card h2, .box h2");
+        const paragraph = box.querySelector(".about-card p, .box p");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Add animation with staggered delays
+                    setTimeout(() => box.classList.add("animate"), 200);  
+                    setTimeout(() => image.classList.add("animate"), 600);
+                    setTimeout(() => heading.classList.add("animate"), 1000);
+                    setTimeout(() => paragraph.classList.add("animate"), 1400);
+
+                    observer.unobserve(entry.target); // Stop observing after animation triggers
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe(box);
+    });
+});
+
+
+  </script>
+
 </body>
 </html>

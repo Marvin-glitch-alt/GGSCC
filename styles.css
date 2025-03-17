@@ -159,6 +159,8 @@ body {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .service-card:hover {
@@ -171,17 +173,23 @@ body {
     height: 100px;
     border-radius: 50%;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .service-card h2 {
     color: #28a745;
     font-size: 24px;
     margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .service-card p {
     font-size: 16px;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 /* Call to Action Section */
@@ -272,6 +280,8 @@ footer {
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .about-card:hover {
@@ -285,17 +295,23 @@ footer {
     height: 30px;
     border-radius: 50%;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .about-card h2 {
     color: rgb(239, 207, 27);
     font-size: 24px;
     margin-bottom: 10px;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .about-card p {
     font-size: 16px;
     margin-bottom: 20px;
+    opacity: 0;
+    transform: translateY(50px);
 }
 
 .container {
@@ -363,8 +379,14 @@ footer {
     min-height: 200px;
     min-width: 250px; /* Ensures proper sizing */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    opacity: 0;
+    transform: translateY(50px);
     
 }
+ .box img, .box h2, .box p {
+    opacity: 0;
+    transform: translateY(50px);
+ }
 
 /* Hover Effect */
 .box:hover {
@@ -382,6 +404,7 @@ footer {
 }
 .mission h2, .vision h2 {
     color: rgb(239, 207, 27);
+   
 }
 
 .mission img, .vision img {
@@ -389,14 +412,16 @@ footer {
     height: 30px;
     border-radius: 50%;
     margin-bottom: 20px;
+   
 }
+
 .logo-text-about  {
     color: #28a745;
     
 }
 
-/* Slide in from bottom animation */
-@keyframes slideInBottom {
+/* Slide-in animation */
+@keyframes slideUp {
     from {
         opacity: 0;
         transform: translateY(50px);
@@ -407,11 +432,18 @@ footer {
     }
 }
 
+/* Apply the animation to selected elements */
+.service-card, .about-card, .box, .team-section, .contact-content, .col-lg-6-text-side, .row {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
 /* Slide in from right animation */
 @keyframes slideInRight {
     from {
         opacity: 0;
-        transform: translateX(100px);
+        transform: translateX(50px);
     }
     to {
         opacity: 1;
@@ -428,12 +460,6 @@ footer {
     transform: translateX(0);
 }
 
-/* Apply animation to specific elements */
-.about-card, .service-card, .box {
-    opacity: 0; /* Initially hidden */
-    animation: slideInBottom 0.8s ease-out forwards;
-}
-
 .img-fluid, .contact-section svg:not(.footer-content svg) {
     opacity: 0; /* Initially hidden */
     animation: slideInRight 0.8s ease-out forwards;
@@ -442,4 +468,11 @@ footer {
 /* Trigger animations on scroll */
 .reveal {
     opacity: 1 !important;
+}
+
+/* JavaScript will add this class to trigger animation */
+.animate {
+    opacity: 1;
+    transform: translateY(0);
+    animation: slideUp 0.6s ease-out forwards;
 }

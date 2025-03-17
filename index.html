@@ -88,7 +88,7 @@
           <div class="col-10 col-sm-8 col-lg-6">
             <img src="./assets/images/supply_chain_1.jpg" class="d-block mx-lg-auto img-fluid" alt="Supply Chain Management" width="500" height="300" loading="auto">
           </div>
-          <div class="col-lg-6">
+          <div class="col-lg-6 col-lg-6-text-side">
             <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Your Trusted Partner in Supply Chain Management </h1>
             <p class="lead">Geo Great supply chain consultancy is a premier logistics and supply chain consulting firm committed to optimizing the efficiency of  global supply chains.Our services help our clients streamline their supply chain operations, eliminate team slacking and improve overall efficiency.</p>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
@@ -143,7 +143,24 @@
       </div>
   </footer>
 
-
+<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+      const elements = document.querySelectorAll(".col-lg-6-text-side, .row, .service-card, .about-card, .box, .team-section, .profile, .contact-content");
+  
+      const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                  entry.target.classList.add("animate");
+              }
+          });
+      }, { threshold: 0.3 });
+  
+      elements.forEach(el => observer.observe(el));
+  });
+  </script>
+
 </body>
 </html>
