@@ -61,10 +61,11 @@
        <!-- Team Section -->
  <div class="team-section">
     <div class="content ">
-    <h3><span><svg xmlns="http://www.w3.org/2000/svg" alt="Logo" width="50" height="80" fill="#28a745" class="bi bi-link-45deg d-inline-block align-text-top" viewBox="0 0 16 16">
+      <svg xmlns="http://www.w3.org/2000/svg" alt="Logo" width="50" height="80" fill="#28a745" class="bi bi-link-45deg d-inline-block align-text-top" viewBox="0 0 16 16">
         <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
         <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
-      </svg><br></span> WE ARE <span class="highlight">THE TEAM</span></h3>
+      </svg><br>
+    <h3><span></span> WE ARE <span class="highlight">THE TEAM</span></h3>
     <p>
     GeoGreat Supply Chain Consultancy is comprised of a diverse group of
    professionals
@@ -72,8 +73,8 @@
    and
     operations. Our consultants have successfully worked with multinational companies
     and understand the global supply chain landscape.
-    </p>
-    <p>
+    <br>
+    <br>
     Our team of highly experienced professionals works collaboratively with clients
     to design and implement solutions that are not only innovative but also sustainable,
     ensuring long-term success and efficiency across supply chain operations.
@@ -151,6 +152,32 @@
   
       elements.forEach(el => observer.observe(el));
   });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const boxes = document.querySelectorAll(".profile, .content, .left, .right");
+
+    boxes.forEach((box) => {
+        const image = box.querySelector(".profile img, .content svg, .left svg, .right svg");
+        const heading = box.querySelector(".profile h4, .content h3, .left h3");
+        const paragraph = box.querySelector(".profile p, .content p, .left p");
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    // Add animation with staggered delays
+                    setTimeout(() => box.classList.add("animate"), 200);  
+                    setTimeout(() => image.classList.add("animate"), 600);
+                    setTimeout(() => heading.classList.add("animate"), 1000);
+                    setTimeout(() => paragraph.classList.add("animate"), 1400);
+
+                    observer.unobserve(entry.target); // Stop observing after animation triggers
+                }
+            });
+        }, { threshold: 0.3 });
+
+        observer.observe(box);
+    });
+});
   </script>
 
 </body>
