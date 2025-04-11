@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta content="ie=edge" />
+  <title>ERP Solutions Procurement Guidance - Geo Great Supply Chain Consultancy</title>
+
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
+
+  <style>
+    .navbar-nav .nav-link:hover {
+      color: rgb(239, 207, 27);
+    }
+    .navbar-nav .nav-link.active {
+      color: #28a745;
+    }
+    span {
+      color: #28a745;
+    }
+    .navbar-text {
+      display: flex;
+      justify-content: center;
+      color: #28a745;
+    }
+
+    .side-bar {
+      width: 380px;
+    }
+    .dropdown-item.active {
+      background-color: #28a745;
+      color: white;
+    }
+    .list-group-item.active {
+      position: relative;
+      background-color: #28a745;
+      color: white;
+    }
+    .list-group-item.active::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: -10px;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-top: 10px solid transparent;
+      border-bottom: 10px solid transparent;
+      border-left: 10px solid #28a745;
+    }
+    .list-group-item {
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .list-group-item:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      background-color: #dff5e1; /* light green tint */
+      color: #28a745;
+      cursor: pointer;
+      transition: background-color 0.2s ease, color 0.2s ease;
+
+    }
+
+    .image-content-section {
+      text-align: center;
+      padding: 2rem;
+    }
+    .image-content-section img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+    }
+    .img-cover {
+      height: 70vh;
+      object-fit: cover;
+      object-position: center;
+    }
+    .vr {
+      width: 1px;
+      background-color: #ccc;
+      height: 100%;
+    }
+    .card {
+      background-color: #28a745;
+      color: white;
+    }
+    .btn-outline-secondary {
+      color: #28a745;
+    }
+    .btn-outline-secondary:hover {
+      background-color: #28a745;
+      color: white;
+    }
+
+    @media (max-width: 767.98px) {
+      .side-bar,
+      .vr {
+        display: none !important;
+      }
+
+      main {
+        flex-direction: column !important;
+      }
+
+      .image-fullscreen-section {
+        padding: 0 1rem;
+      }
+    }
+    .dropdown-item.active,
+    .dropdown-item:active {
+      background-color: #28a745 !important; 
+      color: #fff !important;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="../index.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#28a745" class="bi bi-link-45deg d-inline-block align-text-top" viewBox="0 0 16 16">
+          <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+          <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+        </svg>
+        <span><small><small>GEO GREAT SUPPLY CHAIN CONSULTANCY</small></small></span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="../about.html">About</a></li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="../services.html" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Services</a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="./business-process-reengineering.html">Business Process Re-engeneering</a></li>
+              <li><a class="dropdown-item" href="./training-and-capacity-building.html">Training and Capacity Building</a></li>
+              <li><a class="dropdown-item" href="./global-logistics-management.html">Global Logistics Management</a></li>
+              <li><a class="dropdown-item" href="./project-procurement.html">Project Procurement</a></li>
+              <li><a class="dropdown-item " href="./end-to-end-logistics-solutions.html">End-To-End Logistics Solutions</a></li>
+              <li><a class="dropdown-item" href="./supply-chain-process-audit.html">Supply Chain Process Audit</a></li>
+              <li><a class="dropdown-item active" href="#">ERP Solutions Procurement Guidance</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="../services.html">More</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a class="nav-link" href="../contact.html">Contact</a></li>
+        </ul>
+        <span class="navbar-text">Make It Seamless!</span>
+      </div>
+    </div>
+  </nav>
+  <br>
+
+  <main class="d-flex flex-nowrap">
+    <div>
+    <div class="d-none d-md-flex flex-column align-items-stretch flex-shrink-0 bg-body-tertiary side-bar">
+      <a href="/" class="d-flex align-items-center flex-shrink-0 p-3 text-decoration-none border-bottom">
+        <span class="fs-5 fw-semibold">Make It Seamless!</span>
+      </a>
+      <div class="list-group list-group-flush border-bottom scrollarea">
+        <a href="./business-process-reengineering.html" class="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <strong class="mb-1">Business Process Re-engeneering</strong>
+            <small><i class="fas fa-tools"></i> </small>
+          </div>
+          </a>
+        <a href="./training-and-capacity-building.html" class="list-group-item list-group-item-action py-3 lh-sm">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <strong class="mb-1">Training and Capacity Building</strong>
+            <small class="text-body-secondary"><i class="fas fa-chalkboard-teacher"></i></small>
+          </div>
+          </a>
+        <a href="./global-logistics-management.html" class="list-group-item list-group-item-action py-3 lh-sm">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <strong class="mb-1">Global Logistics Management</strong>
+            <small class="text-body-secondary"><i class="fas fa-truck-plane"></i></small>
+          </div>
+          </a>
+  
+        <a href="./project-procurement.html" class="list-group-item list-group-item-action py-3 lh-sm" aria-current="true">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <strong class="mb-1">Project Procurement</strong>
+            <small class="text-body-secondary"><i class="fas fa-boxes-stacked"></i></small>
+          </div>
+          </a>
+        <a href="#" class="list-group-item list-group-item-action py-3 lh-sm">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <strong class="mb-1">End-To-End Logistics Solutions</strong>
+            <small class="text-body-secondary"><i class="fas fa-route"></i></small>
+          </div>
+         </a>
+        <a href="./supply-chain-process-audit.html" class="list-group-item list-group-item-action py-3 lh-sm">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <strong class="mb-1">Supply Chain Process Audit</strong>
+            <small class="text-body-secondary"><i class="fas fa-clipboard-check"></i></small>
+          </div>
+          </a>
+        <a href="#" class="list-group-item list-group-item-action active py-3 lh-sm" aria-current="true">
+          <div class="d-flex w-100 align-items-center justify-content-between">
+            <strong class="mb-1">ERP Solutions Procurement Guidance</strong>
+            <small class="text-body-secondary"><i class="fas fa-network-wired"></i></small>
+          </div>
+           </a></div>
+    </div>
+      <div class="card mt-4 shadow-sm border-0 rounded text-white d-none d-md-block">
+        <div class="card-body">
+          <h5 class="card-title">Ready to Start?</h5>
+          <p class="card-text">Let's discuss your supply chain needs. Contact us now for a free consultation.</p>
+          <a href="../contact.html" class="btn btn-light btn-outline-secondary btn-sm fw-bold">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+    
+
+    <div class="vr mx-3 d-none d-md-block"></div>
+
+    <section class="image-fullscreen-section flex-grow-1">
+      <div class="container-fluid p-0">
+        <img src="../assets/images/enterprise_resource_planning.jpg" class="img-cover w-100 rounded-4" alt="ERP Solutions Procurement Guidance" />
+      </div>
+
+      <div class="container text-center py-5">
+        <h2 class="fw-bold">ERP Solutions Procurement Guidance</h2>
+        <p class="lead">
+          We offer complete guidance in selecting and purchasing the right ERP (Enterprise Resource Planning) solutions for your organization. This ensures seamless integration with existing IT systems, streamlined business processes, and scalability as your company grows.</p>
+      </div>
+    </section>
+    <div class="card d-block d-md-none my-4">
+      <div class="card shadow-sm border-0 rounded text-white ">
+        <div class="card-body text-center">
+          <h5 class="card-title">Ready to Start?</h5>
+          <p class="card-text">Letss discuss your supply chain needs. Contact us now for a free consultation.</p>
+          <a href="../contact.html" class="btn btn-light btn-outline-secondary fw-bold">Get in Touch</a>
+        </div>
+      </div>
+    </div>
+    
+  </main>
+
+  <footer>
+    <div class="footer-content footer-links border-top text-center py-3">
+      <p>© 2025 GEO GREAT SUPPLY CHAIN CONSULTANCY</p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
