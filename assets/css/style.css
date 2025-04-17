@@ -1,7 +1,7 @@
 /* General Styles */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
+    font-family: 'Inter', sans-serif;
+    background-color: whitesmoke !important;
     margin: 0;
     padding: 0;
    }
@@ -721,7 +721,7 @@ footer {
     color: #28a745;
   }
   .card p{
-    color: white;
+    color: #333;
   }
   .bottom-card {
   background-color: #28a745;

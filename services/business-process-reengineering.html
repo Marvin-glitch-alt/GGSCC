@@ -15,16 +15,12 @@
     color: #28a745;
   }
   .navbar-nav .nav-link.active {
-    color: rgb(239, 207, 27);
+    color: #D9BB25;
   }
   span {
-    color: #28a745;
+    color: #4A5D23;
   }
-  .navbar-text {
-    display: flex;
-    justify-content: center;
-    color: #28a745;
-  }
+
 
   .side-bar {
     width: 380px;
@@ -46,7 +42,7 @@
   .list-group-item.active {
     position: relative;
     background-color: #28a745;
-    color: rg;
+    color: #28a745 !important;
     border-top: none ;
     border-bottom: 1px solid #28a745;
   }
@@ -60,7 +56,7 @@
     height: 0;
     border-top: 10px solid transparent ;
     border-bottom: 10px solid transparent;
-    border-left: 10px solid white;
+    border-left: 10px solid #28a745;
   }
   .list-group-item {
     background-color: transparent !important;
@@ -131,44 +127,13 @@
     color: #fff !important;
   }
 
-  .animated-background-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-  }
 
-  .animated-background-wrapper::before {
-    content: "";
-    position: absolute;
-    width: 110%;
-    height: 110%;
-    background-image: url('../assets/images/enterprise_resource_planning.jpg');
-    background-size: cover;
-    background-position: center;
-    animation: zoomPan 30s infinite alternate ease-in-out;
-    filter: blur(10px); 
-    transform: scale(1.1);
-  }
-  .animated-background-wrapper::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
   .cta-btn:hover {
     background-color: #28a745;
     color: white;
   }
   .cta-btn {
-    background-color: rgb(239, 207, 27);
+    background-color: #D9BB25;
     color: white;
   }
 
@@ -181,11 +146,14 @@
       transform: scale(1.1) translate(20px, 20px);
     }
   }
-  .image-fullscreen-section p, .image-fullscreen-section h2, .image-fullscreen-section li{
-    color: white !important;
+  .image-fullscreen-section p, .image-fullscreen-section li {
+    color: #111 !important;
+  }
+  .image-fullscreen-section h2 {
+    color: #28a745;
   }
   .icon-green {
-  color: #28a745 !important;
+  color: #4A5D23 !important;
 }
 </style>
 
@@ -196,11 +164,11 @@
   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#28a745" class="bi bi-link-45deg d-inline-block align-text-top" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#97D925" class="bi bi-link-45deg d-inline-block align-text-top" viewBox="0 0 16 16">
           <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
           <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
         </svg>
-        <span><small><small><small>GEO GREAT SUPPLY CHAIN CONSULTANCY</small></small></small></span>
+        <span><small><small><small>GEOGREAT SUPPLYCHAIN CONSULTANCY [GSCC]</small></small></small></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -292,15 +260,15 @@
           processes. We ensure consistency and quality in workflow through the provision of standardized document
           templates, reporting formats, and procedural guides.
         <ul>
-          <li>Master procurement plans</li>
-          <li>Purchase order, commercial invoices redesign</li>
-          <li>Standard operating procedures</li>
+          <li class="lead">Master procurement plans</li>
+          <li class="lead">Purchase order, commercial invoices redesign</li>
+          <li class="lead">Standard operating procedures</li>
         </ul>
         </p>
         <p class="lead">Comprehensive audits of your supply chain to identify gaps, risks, and areas for improvement, ensuring your
           operations run seamlessly and cost-effectively.
           <ul>
-            <li>Data Management check list</li>
+            <li class="lead">Data Management check list</li>
           </ul>
         </p>
         <p class="lead">
@@ -326,7 +294,7 @@
 
   <footer>
     <div class="footer-content footer-links border-top text-center py-3">
-      <p>© 2025 GEO GREAT SUPPLY CHAIN CONSULTANCY</p>
+      <p>© 2025 GEOGREAT SUPPLYCHAIN CONSULTANCY [GSCC]</p>
     </div>
   </footer>
 

@@ -11,14 +11,17 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"/>
 
   <style>
+    .navbar {
+      z-index: 1000;
+    }
   .navbar-nav .nav-link:hover {
     color: #28a745;
   }
   .navbar-nav .nav-link.active {
-    color: rgb(239, 207, 27);
+    color: #D9BB25;
   }
   span {
-    color: #28a745;
+    color: #4A5D23;
   }
   .navbar-text {
     display: flex;
@@ -45,7 +48,7 @@
   .list-group-item.active {
     position: relative;
     background-color: #28a745;
-    color: rg;
+    color: #28a745;
     border-top: none ;
     border-bottom: 1px solid #28a745;
   }
@@ -59,7 +62,7 @@
     height: 0;
     border-top: 10px solid transparent ;
     border-bottom: 10px solid transparent;
-    border-left: 10px solid white;
+    border-left: 10px solid #28a745;
   }
   .list-group-item {
     background-color: transparent !important;
@@ -131,44 +134,13 @@
     color: #fff !important;
   }
 
-  .animated-background-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-  }
 
-  .animated-background-wrapper::before {
-    content: "";
-    position: absolute;
-    width: 110%;
-    height: 110%;
-    background-image: url('../assets/images/enterprise_resource_planning.jpg');
-    background-size: cover;
-    background-position: center;
-    animation: zoomPan 30s infinite alternate ease-in-out;
-    filter: blur(10px); 
-    transform: scale(1.1);
-  }
-  .animated-background-wrapper::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
   .cta-btn:hover {
     background-color: #28a745;
     color: white;
   }
   .cta-btn {
-    background-color: rgb(239, 207, 27);
+    background-color: #D9BB25;
     color: white;
   }
 
@@ -181,12 +153,13 @@
       transform: scale(1.1) translate(20px, 20px);
     }
   }
-  .image-fullscreen-section p, .image-fullscreen-section h2, .image-fullscreen-section li{
-    color: white !important;
+  .image-fullscreen-section p, .image-fullscreen-section li{
+    color: #111 !important;
   }
-  .icon-green {
-  color: #28a745 !important;
-}
+  .image-fullscreen-section h2 {
+    color: #28a745;
+  }
+
 
 </style>
 
@@ -197,11 +170,11 @@
   <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="../index.html">
-        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#28a745" class="bi bi-link-45deg d-inline-block align-text-top" viewBox="0 0 16 16">
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#97D925" class="bi bi-link-45deg d-inline-block align-text-top" viewBox="0 0 16 16">
           <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
           <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
         </svg>
-        <span><small><small><small>GEO GREAT SUPPLY CHAIN CONSULTANCY</small></small></small></span>
+        <span><small><small><small>GEOGREAT SUPPLYCHAIN CONSULTANCY [GSCC]</small></small></small></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -228,7 +201,10 @@
     </div>
   </nav>
   <br>
-  <div class="animated-background-wrapper"></div>
+  <div class="hero-banner">
+    <h2 class="lead">Project Procurement & Supply Chain Execution</h2>
+  </div>
+  
 
 
   <main class="d-flex flex-nowrap">
@@ -287,7 +263,7 @@
     <section class="image-fullscreen-section flex-grow-1 ">
      
       <div class="  py-5">
-        <h2 class="fw-bold">Project Procurement & Supply Chain Execution</h2>
+        <div class="info-card">
         <p class="lead">
           End-to-end procurement services to ensure that projects are delivered on time and within budget. We focus on supplier management, contract negotiation, and robust procurement systems to guarantee the successful completion of your projects.
           
@@ -297,7 +273,9 @@
           throughout the entire procurement lifecycle from budgeting and supplier management to logistics
           coordination and performance tracking.
         </p>
-        <p class="lead"> <strong>Our project procurement services include :</strong>
+      </div>
+      <div class="info-card">
+        <p class="lead"> <strong>Our project procurement services include :</strong></p>
         <ul>
           <li class="lead">Procurement budgeting and planning</li>
           <li class="lead">Document management systems for streamlined record-keeping</li>
@@ -307,14 +285,14 @@
           <li class="lead">Liaison with destination country regulatory and government agencies</li>
           <li class="lead">Logistics risk assessments and mitigation strategies</li>
           <li class="lead">Supplier and performance management</li>
-
         </ul>
-        </p>
+      </div>
+      <div class="info-card">
         <p class="lead"><strong> Undertaking a turnkey project?</strong> </p>
         <p class="lead">We can manage your entire supply chain execution including sourcing (both local and offshore), production or
           assembly, and logistics with efficiency and precision.  
         </p>
-        <p class="lead"> <strong>Our turnkey supply chain services cover : </strong>      
+        <p class="lead"> <strong>Our turnkey supply chain services cover : </strong>    </p>  
           <ul>
             <li class="lead">Supplier identification, negotiation, and contracting</li>
             <li class="lead">Pre-shipment coordination and quality assurance</li>
@@ -322,7 +300,8 @@
             <li class="lead">Customs clearance</li>
             <li class="lead">Final delivery to the project site</li>
           </ul>
-        </p>
+        
+      </div>
       </div>
     </section>
     <div class="card d-block d-md-none my-4">
@@ -339,7 +318,7 @@
 
   <footer>
     <div class="footer-content footer-links border-top text-center py-3">
-      <p>© 2025 GEO GREAT SUPPLY CHAIN CONSULTANCY</p>
+      <p>© 2025 GEOGREAT SUPPLYCHAIN CONSULTANCY [GSCC]</p>
     </div>
   </footer>
 
