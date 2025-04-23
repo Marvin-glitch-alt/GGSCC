@@ -1,222 +1,397 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <meta name="description" content="GGSCC offers supply chain consulting, logistics optimization, and operational efficiency improvement services.">
-            <meta name="description" content="Geo Great Supply Chain Consultancy specializes in optimizing logistics operations for maximum efficiency and performance.">
-            <title>GEO GREAT SUPPLY CHAIN CONSULTANCY</title>
-            <link rel="stylesheet" href="assets/css/style.css">
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-            <style>
-              
-              .navbar-nav .nav-link:hover {
-              color: #28a745;
-            }
-            .navbar-nav .nav-link.active {
-              color: rgb(239, 207, 27);
-            }
-            span {
-              color: #28a745;
-            }
-            .navbar-text {
-              display: flex;
-              justify-content: center;
-              color: #28a745;
-            }
-            .col-10 img {
-              border-radius: 10px;
-            }
-            .navbar-toggler {
-              color: rgb(239, 207, 27);
-            }
-            .rates h2{
-              color: #28a745;
-            }
-            .rates p {
-              color: #28a745;
-            }
-            .btn-outline-secondary:hover {
-              background-color: #28a745;
-            }
-            .btn-outline-secondary {
-              color: #28a745;
-            }
-            .btn-primary {
-              background-color: #28a745;
-            }
-            .btn-primary:hover {
-              background-color: white;
-              color: #28a745;
-            }
-            .industry {
-              background-color: #28a745;
-              color: white;
-            }
-            .btn-outline-light:hover {
-              background-color: white;
-              color: #28a745;
-            }
-            .dropdown-menu {
-            background-color: rgba(255, 255, 255, 0.8) !important;
-          }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Geo Great Supply Chain Consultancy</title>
+  <link rel="stylesheet" href="assets/css/index.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+/* General Reset and Typography */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-          .dropdown-item.active,
-          .dropdown-item:active {
-            background-color: #28a745 !important;
-            color: #fff !important;
-          }
-          .dropdown-item.active {  
-            color: white;
-          }
 
-            
-                </style>
-        </head>
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+
+
+
+.hero {
+  position: relative;
+  height: 100vh;
+  background: url('assets/images/supply_chain_1_animated_background.png') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  color: #fff;
+  padding-top: 5rem; 
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(to right, #4A5D23 30%, transparent);
+  z-index: 1;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; 
+  text-align: start;
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  padding-left: 20px !important;
+  font-family: 'Inter', sans-serif;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  margin-bottom: 1rem;
+  color: #e0f2f1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .hero-content{
+    padding-top: 80px;
+  }
+
+  .hero {
+    text-align: center;
+    padding: 6rem 2rem;
+  }
+
+  .hero-overlay {
+    width: 100%;
+    background: rgba(0, 77, 64, 0.7);
+  }
+}
+
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card, .blog-card {
+  background: #f1f1f1;
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.card h3, .blog-card h3 {
+  margin-bottom: 0.5rem;
+}
+
+.cta {
+  background: #D9BB25;
+  color: #fff;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.cta .button {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 1.5rem;
+  background: #fff;
+  color: #00695c;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+
+.container h2 {
+  color:  #4A5D23;
+}
+.hero-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #fff;
+  line-height: 1.2;
+}
+
+.hero-description {
+  font-size: 1rem;
+  margin-top: 1rem;
+  line-height: 1.6;
+  color: #ddd;
+}
+.hero-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #D9BB25;
+  color: #fff;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+.btn-outline-light {
+  border-color: #4A5D23;
+}
+
+.btn-outline-light:hover {
+  border-color: #4A5D23;
+  background-color: white;
+  color: #4A5D23;
+}
+.industry h2, .industry p{
+  color: #4A5D23 !important;
+}
+
+  </style>
+</head>
 <body>
+
+  <header>
     <nav class="navbar sticky-top navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="./index.html"> <svg xmlns="http://www.w3.org/2000/svg" alt="Logo" width="50" height="50" fill="#28a745" class="bi bi-link-45deg d-inline-block align-text-top" viewBox="0 0 16 16">
-            <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
-            <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
-          </svg><span><small><small><small>GEO GREAT SUPPLY CHAIN CONSULTANCY</small></small></small></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarText">
-            <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" href="./index.html">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="./about.html">About Us</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Consultancy Deliverables</a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="services/business-process-reengineering.html">Business Process Re-engeneering</a></li>
-                  <li><a class="dropdown-item" href="services/training-and-capacity-building.html">Training and Capacity Building</a></li>
-                  <li><a class="dropdown-item" href="services/project-procurement-supply-chain-execution.html">Project Procurement & Supply Chain Execution</a></li>
-                  <li><a class="dropdown-item" href="services/global-logistics-management-end-to-end-solutions.html">Global Logistics Management & End-To-End Logistics Solutions</a></li>
-                  <li><a class="dropdown-item" href="services/erp-solutions-procurement-guidance.html">ERP Solutions & Procurement Guidance</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./contact.html">Contact</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./case-studies.html">Cases Studies</a>
-              </li>
-            </ul>
-            <span class="navbar-text">
-                Make It Seamless!
-              </span>
-          </div>
+      <div class="container-fluid">
+        <a class="navbar-brand" href="./index.html"> <svg xmlns="http://www.w3.org/2000/svg" alt="Logo" width="50" height="50" fill="#97D925" class="bi bi-link-45deg d-inline-block align-text-top" viewBox="0 0 16 16">
+          <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
+          <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
+        </svg><span><small><small><small>GEOGREAT SUPPLYCHAIN CONSULTANCY [GSCC]</small></small></small></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav mx-auto me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="./about.html">Who We Are</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">What We Do</a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="services/business-process-reengineering.html">Business Process Re-engeneering</a></li>
+                <li><a class="dropdown-item" href="services/training-and-capacity-building.html">Training and Capacity Building</a></li>
+                <li><a class="dropdown-item" href="services/project-procurement-supply-chain-execution.html">Project Procurement & Supply Chain Execution</a></li>
+                <li><a class="dropdown-item" href="services/global-logistics-management-end-to-end-solutions.html">Global Logistics Management & End-To-End Logistics Solutions</a></li>
+                <li><a class="dropdown-item" href="services/erp-solutions-procurement-guidance.html">ERP Solutions & Procurement Guidance</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./contact.html">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./casestudies.html">Cases Studies</a>
+            </li>
+          </ul>
+          <span class="navbar-text">
+               <small>Make It Seamless!</small>
+            </span>
         </div>
-      </nav>
-      <br>
+      </div>
+    </nav>
+  </header>
 
-      <div class="container col-xxl-8 px-4 py-5 border-bottom border-secondary">
-        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-          <div class="col-10 col-sm-8 col-lg-6">
-            <img src="./assets/images/supply_chain_1_animated_background.png" class="d-block mx-lg-auto img-fluid" alt="Supply Chain Management" width="500" height="300" loading="auto">
-          </div>
-          <div class="col-lg-6 col-lg-6-text-side">
-            <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Your Trusted Partner in Supply Chain Management </h1>
-            <p class="lead">Geo Great supply chain consultancy is a premier logistics and supply chain consulting firm committed to optimizing the efficiency of  global supply chains.Our services help our clients streamline their supply chain operations, eliminate team slacking and improve overall efficiency.</p>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
-              <a href="./services.html"><button type="button" class="btn btn-primary btn-lg px-4 me-md-2">Work with us</button></a>
-             <a href="./contact.html"> <button type="button" class="btn btn-outline-secondary btn-lg px-4">Contact us</button></a>
-            </div>
-          </div>
-        </div>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-start">
+      <h1 class="fw-bold hero-title">
+        Your Trusted Partner<br>
+        in Supply Chain<br>
+        Management
+      </h1>
+      <p class="hero-description">
+        Geo Great is a supply chain consulting firm that helps you make it seamless.<br>
+        From procurement to shipping, we work with you to eliminate delays,<br>
+        cut down costs, and improve how your team operates.<br>
+        Whether it's sourcing smarter, moving faster, or managing better,<br>
+        we turn your supply chain into a competitive edge.
+      </p>
+      <a href="./contact.html" class="hero-btn">Count on us to guide you</a>
+    </div>
+  </section>
   
-        <div class="row align-items-md-stretch mt-5">
-          <div class="col-md-6 py-2">
-            <div class="h-100 p-5 industry rounded-3 text-center">
-              <h2>Key Industries</h2>
-              <p> Manufacturing companies |
-                ICT Solutions Integrators <br>
-                Hospitality firms | Construction firms <br>
-                FMCG (Fast-Moving Consumer Goods) companies</p>
-                <a href="./services.html"><button class="btn btn-outline-light" type="button">Work with us</button></a>
-            </div>
-          </div>
-          <div class="rates col-md-6 py-2">
-            <div class="h-100 p-5  border rounded-3 text-center">
-              <h2><svg xmlns="http://www.w3.org/2000/svg" width="39" height="24" fill="#28a745" class="bi bi-cash-stack" viewBox="0 0 16 16">
-                <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
-                <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z"/>
-              </svg> Our Rates</h2>
-              <p>Charges are calculated based on billable hours following a time-based model. Documents,
-                guides, and report templates are billed as a one-time fee.</p>
-                <a href="./contact.html"><button class="btn btn-outline-secondary" type="button">Get in touch</button></a>
-            </div>
-          </div>
-        </div>
 
-        <br>
+  <section class="expertise">
+    <div class="container">
+      <h2>Consultancy Deliverables</h2>
+      <div class="grid">
+        <div class="card">
+          <small><i class="fas fa-tools icon-green"></i> </small>
+          <h3>Business Process Reengineering</h3>
+          <p>We identify bottlenecks and redesign your operations for faster, leaner, and more efficient performance.</p>
+          <a href="./services/business-process-reengineering.html" class="ctal-button">Learn more</a>
+        </div>
+        <div class="card">
+          <small class="text-body-secondary"><i class="fas fa-chalkboard-teacher icon-green"></i></small>
+          <h3>Training and Capacity Building</h3>
+          <p>We equip your team with the skills and tools needed to run modern, high-performing supply chains.</p>
+          <a href="./services/training-and-capacity-building.html" class="ctal-button">Learn more</a>
+        </div>
+        <div class="card">
+          <small class="text-body-secondary"><i class="fas fa-boxes-stacked icon-green"></i></small>
+          <h3>Project Procurement & Execution</h3>
+          <p>We help you plan, source, and execute projects with precision from the first order to final delivery.</p>
+          <a href="./services/project-procurement-supply-chain-execution.html" class="ctal-button">Learn more</a>
+        </div>
+        <div class="card">
+          <small class="text-body-secondary"><i class="fas fa-truck-plane icon-green"></i></small>
+          <h3>Global Logistics Management</h3>
+          <p>We manage cross-border logistics and streamline every link in your supply chain for smooth, timely movement.</p>
+          <a href="./services/global-logistics-management-end-to-end-solutions.html" class="ctal-button">Learn more</a>
+        </div>
+        <div class="card">
+          <small class="text-body-secondary"><i class="fas fa-network-wired icon-green"></i></small>
+          <h3>ERP & Procurement Guidance</h3>
+          <p>We guide you through ERP integration and smarter procurement practices that boost control and visibility.</p>
+          <a href="./services/erp-solutions-procurement-guidance.html" class="ctal-button">Learn more</a>
+        </div>
   
       </div>
+    </div>
+  </section>
 
-  
-
-
-      <!-- Footer -->
-    <footer>
-      <div class="footer-content footer-links">
-        
-            
-              <br>
-              <p>© 2025 GEO GREAT SUPPLY CHAIN CONSULTANCY <svg xmlns="http://www.w3.org/2000/svg" alt="Logo" width="39" height="24" fill="black" class="bi bi-link-45deg d-inline-block align-text-top" viewBox="0 0 16 16">
-                <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
-                <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
-              </svg> </p>
-          
+  <section class="insights">
+    <div class="container">
+      <h2>The Latest From Geo Great Supply Chain Consultancy</h2>
+      <div class="grid">
+        <div class="blog-card">
+          <h3>How We Delivered Rig Equipment</h3>
+          <p>From China to a client's doorstep in record time.</p>
+          <span>5 Min Read</span>
+        </div>
+        <div class="blog-card">
+          <h3>How Smart Businesses Win with Better Logistics</h3>
+          <span>5 Min Read</span>
+        </div>
+        <div class="blog-card">
+          <h3>What's Really Holding Up Your Supply Chain?</h3>
+          <span>5 Min Read</span>
+        </div>
       </div>
-  </footer>
-  <div class="whatsapp-float" onclick="toggleChat()">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
-</div>
+    </div>
+  </section>
 
-<div class="chat-popup" id="chatPopup">
-  <div class="chat-header">WhatsApp Chat <span onclick="toggleChat()">✖</span>
+<!-- Our Partners Section -->
+<section class="partners-section text-center">
+  <h2 class="section-title">Our Partners</h2>
+  <div class="partner-logos">
+    <a href="https://www.odoo.com" target="_blank" rel="noopener noreferrer">
+      <img src="assets/icons/odoo-logo_brandlogos.net_bphj6.png" alt="Odoo">
+    </a>
+    <a href="https://www.zoho.com" target="_blank" rel="noopener noreferrer">
+      <img src="assets/icons/zoho-logo-2023-brandlogos.net_aw5ugu8g3.svg" alt="Zoho">
+    </a>
+    <a href="https://www.netsuite.com" target="_blank" rel="noopener noreferrer">
+      <img src="assets/images/oracle-netsuite.jpeg" alt="Oracle Netsuite">
+    </a>
   </div>
-  <div class="chat-body" id="chatBody">
-      <!-- Messages will appear here -->
+</section>
+
+<!-- FAQs Section -->
+<section class="faqs-section text-center">
+  <div class="faq-border">
+    <h2 class="faq-title">FAQS</h2>
   </div>
-  <div class="chat-footer">
-      <input type="text" id="chatInput" placeholder="Type a message...">
-      <button onclick="sendMessage()">Send</button>
+</section>
+
+
+<section class="cta">
+  <div class="cta-wrapper">
+    <!-- Left Content -->
+    <div class="h-100 p-5 industry rounded-3 text-center">
+      <h2>Key Industries</h2>
+      <p> Manufacturing companies |
+        ICT Solutions Integrators <br>
+        Hospitality firms | Construction firms <br>
+        FMCG (Fast-Moving Consumer Goods) companies</p>
+        <a href="./services.html"><button class="btn btn-outline-light" type="button">Learn More</button></a>
+    </div>
+    <!-- Vertical Divider -->
+    <div class="vertical-divider"></div>
+
+    <!-- Right Content -->
+    <div class="cta-box">
+      <h2>What can we help you achieve?</h2>
+      <a href="./services.html"><button class="btn btn-outline-light" type="button">Let's Get To Work</button></a>
+    </div>
   </div>
-</div>
+</section>
 
 
-<script src="assets/js/script.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<footer class="footers">
+  <div class="container">
+    <div class="footers-grid">
+      <div class="footer-info">
 
-<script>
- 
+          <h4><small>© GEOGREAT SUPPLYCHAIN CONSULTANCY [GSCC]</small></h4>
+          <ul>
+            <li><a href="./about.html">Who We Are</a></li>
+            <li><a href="#">What We Do</a></li>
+            <li><a href="./case-studies.html">Industry News</a></li>
+            <li><a href="./contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+
+      <div class="social-links">
+        <h4>Follow Us</h4>
+        <a href="#" target="_blank" rel="noreferrer">
+          <i class="fab fa-linkedin"></i>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
 
 
-  document.addEventListener("DOMContentLoaded", function () {
-      const elements = document.querySelectorAll(".col-lg-6-text-side, .row, .service-card, .about-card, .box, .team-section, .profile, .contact-content");
+      <!-- Whatsapp chatbot -->
+      <div class="whatsapp-float" onclick="toggleChat()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    </div>
+    
+    <div class="chat-popup" id="chatPopup">
+      <div class="chat-header">Chat With Us <span onclick="toggleChat()">✖</span>
+      </div>
+      <div class="chat-body" id="chatBody">
+          <!-- Messages will appear here -->
+      </div>
+      <div class="chat-footer">
+          <input type="text" id="chatInput" placeholder="Type a message...">
+          <button onclick="sendMessage()">Send</button>
+      </div>
+    </div>
+
+  <script src="assets/js/script.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   
-      const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  entry.target.classList.add("animate");
-              }
-          });
-      }, { threshold: 0.3 });
-  
-      elements.forEach(el => observer.observe(el));
-  });
-  </script>
-
 </body>
 </html>

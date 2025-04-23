@@ -1,0 +1,143 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f4f6f8;
+  }
+
+  .contact-section {
+    padding: 50px 0;
+    background: linear-gradient(to right, #4A5D23, #9ACD32);
+    color: white;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 0 20px;
+    padding-top: 70px;
+  }
+  
+  .contact-info, .contact-form {
+    background: white;
+    border-radius: 10px;
+    padding: 30px;
+    flex: 1;
+    min-width: 300px;
+    color: #333;
+  }
+  
+  .contact-info {
+    background: transparent;
+    color: white;
+  }
+  
+  .contact-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info .info-block {
+    margin: 25px 0;
+  }
+  
+  .contact-info .info-block h4 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    font-size: 16px;
+  }
+  
+  .contact-info i {
+    margin-right: 10px;
+  }
+  
+  .contact-form h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form p {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #9ACD32;
+    border-radius: 8px;
+    font-size: 14px;
+    outline: none;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #4A5D23;
+  }
+  
+  button {
+    background: linear-gradient(to right, #4A5D23, #9ACD32);
+    border: none;
+    padding: 14px;
+    color: white;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+  }
+  
+  button:hover {
+    background: #4A5D23;
+  }
+  
+  .contact-form a {
+    color: #CFB53B;
+    text-decoration: none;
+  }
+
+
+  .contact-form:hover a {
+    color: #4A5D23;
+    text-decoration: none;
+  }
+
+
+  .toast-success {
+    visibility: hidden;
+    min-width: 250px;
+    background-color: #4A5D23;
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    padding: 16px;
+    position: fixed;
+    z-index: 1001;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 16px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+    opacity: 0;
+  }
+  
+  .toast-success.show {
+    visibility: visible;
+    opacity: 1;
+  }
+  
+
+
+
+
+  

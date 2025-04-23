@@ -1,9 +1,19 @@
 // Function to toggle the chat popup visibility
+let hasWelcomed = false;  // Track if welcome message has already been shown
+
 function toggleChat() {
     var chatPopup = document.getElementById("chatPopup");
-    chatPopup.style.display = (chatPopup.style.display === "none" || chatPopup.style.display === "") ? "block" : "none";
+    const isOpening = (chatPopup.style.display === "none" || chatPopup.style.display === "");
+
+    chatPopup.style.display = isOpening ? "block" : "none";
     chatPopup.classList.toggle("open");
+
+    if (isOpening && !hasWelcomed) {
+        showWelcomeMessage();
+        hasWelcomed = true;
+    }
 }
+
 
 
 // Function to send and display messages as chat bubbles
@@ -38,18 +48,24 @@ function sendMessage() {
         .then(data => {
             // Remove typing indicator
             chatBody.removeChild(typingIndicator);
-
+        
             if (data.response) {
                 var botReply = document.createElement("p");
-                botReply.textContent = data.response;  
+                botReply.textContent = data.response;
                 botReply.classList.add("bot-message");
                 chatBody.appendChild(botReply);
+        
+                // 🔁 Check if consultant was requested
+                if (data.response.toLowerCase().includes("consultant")) {
+                    launchWhatsAppWorkflow();
+                }
             } else {
                 console.log("No response from backend.");
             }
-
+        
             chatBody.scrollTop = chatBody.scrollHeight;
         })
+  
         .catch((error) => {
             console.error('Error:', error);
             // Display error message in case of an issue
@@ -87,3 +103,42 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("scroll", handleScroll);
     handleScroll(); // Trigger on load in case elements are already in view
 });
+
+
+  window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("mainNavbar");
+    if (window.scrollY > 50) {
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+    }
+  });
+
+  function launchWhatsAppWorkflow() {
+    const chatBody = document.getElementById("chatBody");
+
+    // Create WhatsApp link/message UI
+    const handoffMessage = document.createElement("div");
+    handoffMessage.classList.add("bot-message");
+    handoffMessage.innerHTML = `
+        <p>Or to continue the conversation, please chat with us on WhatsApp:</p>
+        <a href="https://wa.me/254703570025" target="_blank" class="whatsapp-link">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" style="vertical-align:middle;"> 
+            <span style="margin-left:8px;">Open WhatsApp Chat</span>
+        </a>
+    `;
+    
+    chatBody.appendChild(handoffMessage);
+    chatBody.scrollTop = chatBody.scrollHeight;
+}
+
+function showWelcomeMessage() {
+  const chatBody = document.getElementById("chatBody");
+
+  const welcomeMsg = document.createElement("p");
+  welcomeMsg.classList.add("bot-message");
+  welcomeMsg.textContent = "👋 Hi there! I'm your assistant from GeoGreat Supply Chain Consultancy. How can I help you today?";
+
+  chatBody.appendChild(welcomeMsg);
+  chatBody.scrollTop = chatBody.scrollHeight;
+}
