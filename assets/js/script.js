@@ -1,3 +1,24 @@
+const toggler = document.querySelector('.navbar-toggler');
+const icon = toggler.querySelector('.custom-toggler-icon');
+
+toggler.addEventListener('click', function () {
+  icon.classList.toggle('open');
+});
+
+// Optional: Reset to hamburger on nav link click
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+const collapseEl = document.getElementById('navbarNav');
+const bsCollapse = new bootstrap.Collapse(collapseEl, { toggle: false });
+
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    if (window.innerWidth < 768) {
+      bsCollapse.hide();
+      icon.classList.remove('open'); // Reset to hamburger
+    }
+  });
+});
+
 // Function to toggle the chat popup visibility
 let hasWelcomed = false;  // Track if welcome message has already been shown
 

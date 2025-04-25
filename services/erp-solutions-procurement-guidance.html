@@ -15,10 +15,10 @@
     color: #28a745;
   }
   .navbar-nav .nav-link.active {
-    color: rgb(239, 207, 27);
+    color: #D9BB25;
   }
   span {
-    color: #28a745;
+    color: #4A5D23;
   }
   .navbar-text {
     display: flex;
@@ -43,7 +43,7 @@
   .list-group-item.active {
     position: relative;
     background-color: #28a745;
-    color: rg;
+    color: #28a745;
     border-top: none ;
     border-bottom: 1px solid #28a745;
   }
@@ -57,7 +57,7 @@
     height: 0;
     border-top: 10px solid transparent ;
     border-bottom: 10px solid transparent;
-    border-left: 10px solid white;
+    border-left: 10px solid #28a745;
   }
   .list-group-item {
     background-color: transparent !important;
@@ -132,38 +132,7 @@
     color: white;
   }
 
-  .animated-background-wrapper {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    overflow: hidden;
-  }
 
-  .animated-background-wrapper::before {
-    content: "";
-    position: absolute;
-    width: 110%;
-    height: 110%;
-    background-image: url('../assets/images/enterprise_resource_planning.jpg');
-    background-size: cover;
-    background-position: center;
-    animation: zoomPan 30s infinite alternate ease-in-out;
-    filter: blur(10px); 
-    transform: scale(1.1);
-  }
-  .animated-background-wrapper::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4); 
-    top: 0;
-    left: 0;
-    z-index: 1;
-  }
   .cta-btn:hover {
     background-color: #28a745;
     color: white;
@@ -182,8 +151,11 @@
       transform: scale(1.1) translate(20px, 20px);
     }
   }
-  .image-fullscreen-section p, .image-fullscreen-section h2, .image-fullscreen-section li{
-    color: white !important;
+  .image-fullscreen-section p, .image-fullscreen-section li{
+    color: #111 !important;
+  }
+  .image-fullscreen-section h2 {
+    color: #28a745;
   }
   .icon-green {
   color: #28a745 !important;
@@ -201,7 +173,7 @@
           <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1 1 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4 4 0 0 1-.128-1.287z"/>
           <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243z"/>
         </svg>
-        <span><small><small><small>GEO GREAT SUPPLY CHAIN CONSULTANCY</small></small></small></span>
+        <span><small><small><small>GEOGREAT SUPPLYCHAIN CONSULTANCY [GSCC]</small></small></small></span>
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
