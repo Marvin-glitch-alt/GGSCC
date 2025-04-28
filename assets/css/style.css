@@ -1,6 +1,6 @@
 /* General Styles */
 body {
-    font-family: 'Inter', sans-serif;
+    font-family: Georgia, serif;
     background-color: whitesmoke !important;
     margin: 0;
     padding: 0;
@@ -19,6 +19,7 @@ body {
   z-index: 1000 !important;
   background: linear-gradient(to right, #4A5D23, #9acd32) !important;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
+  font-family: Georgia, serif;
 }
 
 .navbar.sticky-top {
@@ -141,7 +142,6 @@ body {
 /* Style the dropdown toggle button */
 .dropdown-toggle {
   color: #fff; 
-  background-color: #4CAF50; 
   border: none; 
 }
 
@@ -295,7 +295,7 @@ body {
     background: #1c1c1c;
     color: white;
     padding: 40px 20px;
-    font-family: 'Inter', sans-serif;
+    font-family: Georgia, serif;
     margin-top: 60px;
   }
   
@@ -467,7 +467,7 @@ body {
 .chat-body .user-message {
   background: linear-gradient(to right, #4A5D23, #9ACD32);
     color: white;
-    text-align: right;
+    text-align: left;
     align-self: flex-end;
     border-top-right-radius: 0;
     float: right;
@@ -512,7 +512,7 @@ body {
 .typing-dots span {
     width: 6px;
     height: 6px;
-    background-color: #25D366;
+    background-color: #4A5D23;
     border-radius: 50%;
     animation: blink 1.4s infinite both;
 }
@@ -643,7 +643,7 @@ body {
     color: white;
     font-size: 2rem;
     font-weight: bold;
-    font-family: 'Arial Black', sans-serif;
+    font-family: Georgia, serif;
     margin-bottom: 30px;
   }
   
@@ -682,8 +682,8 @@ body {
   }
   
   .faq-border {
-    border-top: 6px solid #96db20;
-    border-bottom: 6px solid #96db20;
+    border-top: 6px solid #4A5D23;
+    border-bottom: 6px solid #4A5D23;
     padding: 10px 0;
     width: 90%;
     margin: 0 auto;
@@ -692,7 +692,7 @@ body {
   .faq-title {
     font-size: 2rem;
     font-weight: bold;
-    font-family: 'Arial Black', sans-serif;
+    font-family: Georgia, serif;
     color: black;
   }
   

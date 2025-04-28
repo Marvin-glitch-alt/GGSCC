@@ -1,0 +1,169 @@
+body {
+  font-family: Georgia, serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+.hero-section {
+  position: relative;
+  background: url('../images/business_process_re-engineering.jpg') no-repeat center center/cover;
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(74, 93, 35, 0.6) 30%, transparent);
+  z-index: 1; /* Ensures the overlay is above the background but below the text */
+}
+
+.hero-section .container {
+  position: relative;
+  z-index: 2; /* Makes sure the text stays above the overlay */
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  z-index: 2;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  z-index: 2;
+}
+
+
+.service-section {
+  background-color: transparent;
+  padding: 60px 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+  color: #333;
+  font-family: Georgia, serif;
+  text-align: center; /* Center all text inside */
+}
+
+.service-section h2, .service-section h5 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #4A5D23;
+  margin-bottom: 30px;
+}
+
+.service-section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.service-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 2rem auto;
+  max-width: 600px; /* controls how wide your list is */
+}
+
+
+
+.service-section ul li::before {
+  content: "✔";
+  color: #CFB53B; 
+  margin-right: 0.75rem;
+  font-size: 1.4rem;
+}
+
+.service-list {
+  list-style: none;
+  padding: 0;
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.service-list li {
+  position: relative;
+  padding-left: 50px;
+  margin-bottom: 40px;
+}
+
+.service-list li::before {
+  content: "✔️";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #9BB64D;
+  font-size: 1.5rem;
+}
+
+.service-title {
+  font-size: 1.3rem;
+  margin-bottom: 8px;
+  color: #2e3b1f;
+}
+
+.service-description {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+
+.service-section .container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+
+.service-section p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 767px) {
+  .service-section h2 {
+      font-size: 2rem;
+  }
+
+  .service-section p {
+      font-size: 1rem;
+  }
+
+  .service-section ul li {
+      font-size: 1rem;
+  }
+}
+
+
+
+
+.cta-section {
+  background: linear-gradient(to right, #4A5D23, #9acd32);
+  color: white;
+  padding: 50px 0;
+  text-align: center;
+  font-family: Georgia, serif;
+}
+
+.cta-section h3 {
+  font-size: 2rem;
+}
+
+.cta-section a {
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(to left, #4A5D23, #9acd32);
+  padding: 10px 20px;
+  font-size: 1.1rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-section a:hover {
+  color: #CFB53B;
+}

@@ -4,7 +4,7 @@
     padding: 60px 20px;
     padding-top: 100px;
     color: #333;
-    font-family: 'Inter', sans-serif;
+    font-family: Georgia, serif;
   }
   
   .about-section .section-title {
@@ -24,13 +24,14 @@
   
   
   .card {
-    background: white;
+    font-family: Georgia, serif;
     border-radius: 12px;
     padding: 25px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.08);
     flex: 1 1 300px;
     max-width: 500px;
     transition: transform 0.3s ease;
+    background: transparent;
   }
   
   .info-cards .card:hover {
@@ -56,11 +57,12 @@
     line-height: 1.6;
   }
   .info-cards .card {
-    background: linear-gradient(145deg, #ffffff, #f2f2f2);
+    
     border-top: 4px solid #28a745;
     border-radius: 15px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.05);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: transparent;
   }
   
   .info-cards .card h3 img {
@@ -78,6 +80,7 @@
   }
 
   .clients-section {
+    font-family: Georgia, serif;
     width: 100%;
     margin-top: 30px;
     padding: 30px 20px 0;
@@ -92,6 +95,7 @@
     margin-bottom: 20px;
     color: #4A5D23 !important;
     position: relative;
+    font-family: Georgia, serif;
   }
   .section-title::after {
     content: '';
@@ -109,7 +113,7 @@
     margin: 0 auto 30px;
     font-size: 17px;
     color: #333;
-    font-family: 'Inter', sans-serif;
+    font-family: Georgia, serif;
   }
   
 
@@ -146,7 +150,6 @@
   }
   
   .client-card:hover .overlay {
-
     background: rgba(0, 0, 0, 0.85);
   }
   
@@ -158,25 +161,27 @@
   .client-card p {
     font-size: 14px;
     line-height: 1.5;
-    font-family: 'Inter', sans-serif;
+    font-family: Georgia, serif;
   }
 
   .team-section {
+    font-family: Georgia, serif;
     padding: 0 20px 30px;
     background: transparent !important;
-    font-family: 'Inter', sans-serif;
+    
   }
   .team-description {
+    font-family: Georgia, serif;
     text-align: center;
     max-width: 900px;
     margin: 0 auto 30px;
     font-size: 17px;
     color: #333;
-    font-family: 'Inter', sans-serif;
   }
 
 
   .profile {
+    font-family: Georgia, serif;
     text-align: center;
     margin-top: 30px;
     display: flex;
@@ -217,7 +222,7 @@
     margin: 0 auto 30px;
     font-size: 17px;
     color: #333;
-    font-family: 'Inter', sans-serif;
+    font-family: Georgia, serif;
     color: #4A5D23 !important;
   }
  

@@ -148,7 +148,7 @@
 
   <script>
     document.getElementById("contactForm").addEventListener("submit", function(e) {
-      e.preventDefault(); // Prevent default form submission
+      e.preventDefault(); 
     
       const formData = new FormData(e.target);
       const data = Object.fromEntries(formData.entries());
@@ -166,7 +166,7 @@
       })
       .then(response => {
         showSuccessToast("Message sent successfully!");
-        e.target.reset(); // Reset the form
+        e.target.reset(); 
       })
       .catch(error => {
         showSuccessToast("Failed to send message. Please try again.", true);

@@ -1,0 +1,145 @@
+body {
+    font-family: Georgia, serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.hero-section {
+    font-family: Georgia, serif;
+    background: linear-gradient(to right, #4A5D23, #9acd32);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 3rem;
+}
+
+.grid-section {
+  font-family: Georgia, serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+}
+
+.grid-row {
+  display: flex;
+  align-items: stretch;
+  margin-bottom: 80px;
+  gap: 40px;
+}
+
+.grid-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.grid-image, .grid-content {
+  flex: 1 1 50%;
+}
+
+.grid-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0;
+}
+
+
+.grid-row:not(.reverse) .grid-image img {
+  border-top-left-radius: 40px;
+}
+
+.grid-row.reverse .grid-image img {
+  border-bottom-right-radius: 40px;
+}
+
+.grid-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f8f9fa;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.grid-content h2 {
+  font-size: 2rem;
+  color: #4A5D23;
+  margin-bottom: 20px;
+}
+
+.grid-content p {
+  font-size: 1.2rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+}
+.grid-content:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+.read-more {
+  color: #CFB53B;
+  font-weight: bold;
+  text-decoration: none;
+}
+.read-more:hover {
+  color: #CFB53B;
+  text-decoration: none !important;
+}
+
+
+
+@media (max-width: 768px) {
+  .grid-row, .grid-row.reverse {
+    flex-direction: column;
+  }
+
+  .grid-row.reverse .grid-image img,
+  .grid-row:not(.reverse) .grid-image img {
+    border-radius: 20px;
+  }
+  
+  .grid-image, .grid-content {
+    flex: 1 1 100%;
+  }
+
+  .grid-content {
+    padding: 30px 20px;
+  }
+}
+.section {
+  font-family: Georgia, serif;
+  font-size: large;
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.section h2 {
+  font-size: 2em;
+  margin-bottom: 15px;
+  color: #4A5D23;
+}
+.section ul {
+  font-family: Georgia, serif;
+  list-style-type: none;
+  padding: 0;
+}
+.section ul li {
+  margin: 10px 0;
+
+}
+.cta-btn {
+  display: inline-block;
+  color: #4A5D23;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1.2em;
+  margin-top: 20px;
+}
+.cta-btn:hover {
+  color: #CFB53B;
+}
