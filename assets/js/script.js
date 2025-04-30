@@ -1,3 +1,5 @@
+let hasWelcomed = false;  
+
 const toggler = document.querySelector('.navbar-toggler');
 const icon = toggler.querySelector('.custom-toggler-icon');
 
@@ -19,8 +21,11 @@ navLinks.forEach(link => {
   });
 });
 
+ 
 
-let hasWelcomed = false;  
+
+
+
 
 function toggleChat() {
     var chatPopup = document.getElementById("chatPopup");
@@ -141,7 +146,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const handoffMessage = document.createElement("div");
     handoffMessage.classList.add("bot-message");
     handoffMessage.innerHTML = `
-        <p>Or to continue the conversation, please chat with us on WhatsApp:</p>
+        <p>Or chat with us on WhatsApp:</p>
         <a href="https://wa.me/254703570025" target="_blank" class="whatsapp-link">
             <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" width="20" style="vertical-align:middle;"> 
             <span style="margin-left:8px;">Open WhatsApp Chat</span>
@@ -157,7 +162,7 @@ function showWelcomeMessage() {
 
   const welcomeMsg = document.createElement("p");
   welcomeMsg.classList.add("bot-message");
-  welcomeMsg.textContent = "👋 Hi there! I'm your assistant from GeoGreat Supply Chain Consultancy. How can I help you today?";
+  welcomeMsg.textContent = "👋 Hi there! I'm your assistant from GSCC. How can I help you today?";
 
   chatBody.appendChild(welcomeMsg);
   chatBody.scrollTop = chatBody.scrollHeight;

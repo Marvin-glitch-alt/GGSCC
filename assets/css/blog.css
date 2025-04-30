@@ -80,15 +80,7 @@ body {
   transform: translateY(-10px);
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
 }
-.read-more {
-  color: #CFB53B;
-  font-weight: bold;
-  text-decoration: none;
-}
-.read-more:hover {
-  color: #CFB53B;
-  text-decoration: none !important;
-}
+
 
 
 

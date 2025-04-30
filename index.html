@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="GeoGreat SupplyChain Consultancy [GSCC] specializes in optimizing logistics operations for maximum efficiency and performance.">
-  <meta name="description" content="GSCC offers supply chain consulting, logistics optimization, and operational efficiency improvement services.">
-  <title>Home - Geo Great Supply Chain Consultancy</title>
+  <meta name="description" content="GeoGreat SupplyChain Consultancy (GSCC) - Optimizing logistics, enhancing efficiency, and empowering supply chain teams.">
+  <meta name="keywords" content="supply chain, logistics, GSCC, GeoGreat, efficiency, training, digital transformation">
+  <meta name="robots" content="index, follow">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Home - Geo Great Supply Chain Consultancy</title>
   <link rel="stylesheet" href="assets/css/index.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
@@ -35,6 +37,7 @@ a {
   align-items: center;
   color: #fff;
   padding-top: 5rem; 
+  font-family: Georgia, serif;
 }
 
 .hero-overlay {
@@ -56,7 +59,7 @@ a {
   z-index: 2;
   max-width: 700px;
   padding-left: 20px !important;
-  font-family: 'Inter', sans-serif;
+  font-family: Georgia, serif;
 }
 
 .hero h2 {
@@ -103,11 +106,25 @@ h2 {
   gap: 1.5rem;
 }
 
-.card, .blog-card {
+.card {
+  background: transparent !important;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+.faqs-section .card{
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.blog-card {
   background: #f1f1f1;
   padding: 1.5rem;
   border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
 }
+
 
 .card h3, .blog-card h3 {
   margin-bottom: 0.5rem;
@@ -147,6 +164,7 @@ h2 {
   margin-top: 1rem;
   line-height: 1.6;
   color: #ddd;
+  font-family: Georgia, serif;
 }
 .hero-btn {
   display: inline-block;
@@ -158,9 +176,11 @@ h2 {
   text-decoration: none;
   border-radius: 5px;
   font-size: 0.9rem;
+  font-family: Georgia, serif;
 }
 .btn-outline-light {
   border-color: #4A5D23;
+  color: #4A5D23;
 }
 
 .btn-outline-light:hover {
@@ -170,6 +190,13 @@ h2 {
 }
 .industry h2, .industry p{
   color: #4A5D23 !important;
+}
+.blog-card:hover, 
+.card:hover,
+.faqs-section .card:hover
+{
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 128, 0, 0.15);
 }
 
 
@@ -210,7 +237,7 @@ h2 {
               <a class="nav-link" href="./contact.html">Contact</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="./casestudies.html">Cases Studies</a>
+              <a class="nav-link" href="./casestudies.html">Industry News</a>
             </li>
           </ul>
           <span class="navbar-text">
@@ -249,31 +276,31 @@ h2 {
           <small><i class="fas fa-tools icon-green"></i> </small>
           <h3>Business Process Reengineering</h3>
           <p>We identify bottlenecks and redesign your operations for faster, leaner, and more efficient performance.</p>
-          <a href="./services/business-process-reengineering.html" class="ctal-button">Learn more</a>
+          <a href="services/business-process-reengineering.html" class="ctal-button">Learn more</a>
         </div>
         <div class="card">
           <small class="text-body-secondary"><i class="fas fa-chalkboard-teacher icon-green"></i></small>
           <h3>Training and Capacity Building</h3>
           <p>We equip your team with the skills and tools needed to run modern, high-performing supply chains.</p>
-          <a href="./services/training-and-capacity-building.html" class="ctal-button">Learn more</a>
+          <a href="services/training-and-capacity-building.html" class="ctal-button">Learn more</a>
         </div>
         <div class="card">
           <small class="text-body-secondary"><i class="fas fa-boxes-stacked icon-green"></i></small>
           <h3>Project Procurement & Execution</h3>
           <p>We help you plan, source, and execute projects with precision from the first order to final delivery.</p>
-          <a href="./services/project-procurement-supply-chain-execution.html" class="ctal-button">Learn more</a>
+          <a href="services/project-procurement-supply-chain-execution.html" class="ctal-button">Learn more</a>
         </div>
         <div class="card">
           <small class="text-body-secondary"><i class="fas fa-truck-plane icon-green"></i></small>
           <h3>Global Logistics Management</h3>
           <p>We manage cross-border logistics and streamline every link in your supply chain for smooth, timely movement.</p>
-          <a href="./services/global-logistics-management-end-to-end-solutions.html" class="ctal-button">Learn more</a>
+          <a href="services/global-logistics-management-end-to-end-solutions.html" class="ctal-button">Learn more</a>
         </div>
         <div class="card">
           <small class="text-body-secondary"><i class="fas fa-network-wired icon-green"></i></small>
           <h3>ERP & Procurement Guidance</h3>
           <p>We guide you through ERP integration and smarter procurement practices that boost control and visibility.</p>
-          <a href="./services/erp-solutions-procurement-guidance.html" class="ctal-button">Learn more</a>
+          <a href=".services/erp-solutions-procurement-guidance.html" class="ctal-button">Learn more</a>
         </div>
   
       </div>
@@ -284,22 +311,22 @@ h2 {
     <div class="container">
       <h2>The Latest From Geo Great Supply Chain Consultancy</h2>
       <div class="grid">
-        <div class="blog-card">
-          <h3>How We Delivered Rig Equipment</h3>
-          <p>From China to a client's doorstep in record time.</p>
-          <span>5 Min Read</span>
+        <div class="blog-card ">
+          <h3>Why Businesses Are Rethinking Their Supply Chains in 2025</h3>
+          
+          <span><a href="blog/why-businesses-are-rethinking-their-supply-chains-in-2025.html" class="read-more">Read More ➔</a></span>
         </div>
-        <div class="blog-card">
-          <h3>How Smart Businesses Win with Better Logistics</h3>
-          <span>5 Min Read</span>
+        <div class="blog-card ">
+          <h3>How Global Logistics Management is Evolving in 2025</h3>
+          <span><a href="blog/how-global-logistics-management-is-evolving-in-2025.html" class="read-more">Read More ➔</a></span>
         </div>
-        <div class="blog-card">
-          <h3>What's Really Holding Up Your Supply Chain?</h3>
-          <span>5 Min Read</span>
+        <div class="blog-card ">
+          <h3>The Secret Weapon for Supply Chain Success</h3>
+          <span><a href="blog/business-process-reengineering-the-secret-weapon-for-supply-chain-success.html" class="read-more">Read More ➔</a></span>
         </div>
       </div>
     </div>
-  </section>
+  </section>>
 
 
 <section class="partners-section text-center">
@@ -318,8 +345,40 @@ h2 {
 </section>
 
 <section class="faqs-section text-center">
-  <div class="faq-border">
-    <h2 class="faq-title">FAQS</h2>
+  <div class="faq-border container py-5">
+    <h2 class="faq-title mb-4">FAQs</h2>
+
+    <div class="row justify-content-center">
+      
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body ">
+            <h5 class="card-title">What is supply chain management (SCM)</h5>
+            <p class="card-text">SCM refers to the coordination and oversight of all activities involved in sourcing, production, logistics, and delivery of goods and services.</p>
+          </div>
+        </div>
+      </div>
+
+      
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body">
+            <h5 class="card-title">Why is supply chain optimization important?</h5>
+            <p class="card-text">It improves efficiency, reduces costs, minimizes delays, and enhances customer satisfaction.</p>
+          </div>
+        </div>
+      </div>
+
+     
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <div class="card-body ">
+            <h5 class="card-title">What types of companies benefit from supply chain consulting?</h5>
+            <p class="card-text">Any company that handles inventory, manufacturing, distribution, or logistics can benefit from startups to large enterprises.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -333,14 +392,14 @@ h2 {
         ICT Solutions Integrators <br>
         Hospitality firms | Construction firms <br>
         FMCG (Fast-Moving Consumer Goods) companies</p>
-        <a href="./services.html"><button class="btn btn-outline-light" type="button">Learn More</button></a>
+        <a href="./contact.html"><button class="btn btn-outline-light" type="button">Get a quote</button></a>
     </div>
   
     <div class="vertical-divider"></div>
 
     <div class="cta-box">
       <h2>What can we help you achieve?</h2>
-      <a href="./services.html"><button class="btn btn-outline-light" type="button">Let's Get To Work</button></a>
+      <a href="./contact.html"><button class="btn btn-outline-light" type="button">Let's Get To Work</button></a>
     </div>
   </div>
 </section>
@@ -355,14 +414,14 @@ h2 {
           <ul>
             <li><a href="./about.html">Who We Are</a></li>
             <li><a href="#">What We Do</a></li>
-            <li><a href="./case-studies.html">Industry News</a></li>
+            <li><a href="./casestudies.html">Industry News</a></li>
             <li><a href="./contact.html">Contact Us</a></li>
           </ul>
         </div>
 
       <div class="social-links">
         <h4>Follow Us</h4>
-        <a href="#" target="_blank" rel="noreferrer">
+        <a href="https://www.linkedin.com/company/geo-great-supply-chain-consultancy/" target="_blank" rel="noopener" rel="noreferrer">
           <i class="fab fa-linkedin"></i>
         </a>
       </div>
@@ -394,6 +453,31 @@ h2 {
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script>
 
+    document.addEventListener("DOMContentLoaded", function () {
+        const animatedElements = document.querySelectorAll(".expertise h2, .card, .insights h2, .blog-card, .partner-logos, .card-body");
+    
+        const observer = new IntersectionObserver((entries, observer) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+       
+              entry.target.classList.add("animate");
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.3 });
+    
+        animatedElements.forEach((el, index) => {
+          el.classList.add("slide-up");
+    
+          
+          const delay = index * 0.2; 
+          el.style.setProperty('--delay', `${delay}s`);
+    
+          observer.observe(el);
+        });
+      }); 
+      </script>
 </body>
 </html>
