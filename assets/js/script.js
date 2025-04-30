@@ -1,5 +1,11 @@
 let hasWelcomed = false;  
 
+document.getElementById("chatInput").addEventListener("keypress", function(e) {
+    if (e.key === "Enter") {
+        sendMessage();
+    }
+});
+
 const toggler = document.querySelector('.navbar-toggler');
 const icon = toggler.querySelector('.custom-toggler-icon');
 
@@ -21,12 +27,6 @@ navLinks.forEach(link => {
   });
 });
 
- 
-
-
-
-
-
 function toggleChat() {
     var chatPopup = document.getElementById("chatPopup");
     const isOpening = (chatPopup.style.display === "none" || chatPopup.style.display === "");
@@ -39,9 +39,6 @@ function toggleChat() {
         hasWelcomed = true;
     }
 }
-
-
-
 
 function sendMessage() {
     var input = document.getElementById("chatInput");
@@ -100,15 +97,6 @@ function sendMessage() {
         chatBody.scrollTop = chatBody.scrollHeight;
     }
 }
-
-
-
-document.getElementById("chatInput").addEventListener("keypress", function(e) {
-    if (e.key === "Enter") {
-        sendMessage();
-    }
-});
-
 
 
 document.addEventListener("DOMContentLoaded", function () {
