@@ -19,7 +19,7 @@ body {
   z-index: 1000 !important;
   background: linear-gradient(to right, #4A5D23, #9acd32) !important;
   box-shadow: 0 2px 10px rgba(0,0,0,0.1) !important;
-
+  font-family: Georgia, serif;
 }
 
 .navbar.sticky-top {
